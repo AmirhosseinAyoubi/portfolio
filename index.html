@@ -10,11 +10,9 @@
   <meta property="og:description" content="Front‑End Engineer focused on performance, design systems, and delightful UI.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="">
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- Tailwind Play CDN (no build step) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -41,7 +39,6 @@
     }
   </script>
   <style>
-    /* Fancy gradient background */
     .bg-grid {
       background-image:
         radial-gradient(circle at 25px 25px, rgba(0,0,0,0.06) 2px, transparent 0),
@@ -59,7 +56,6 @@
     .shadow-soft { box-shadow: 0 10px 25px rgba(2,6,23,0.15), 0 4px 10px rgba(2,6,23,0.08); }
     .dark .shadow-soft { box-shadow: 0 10px 25px rgba(0,0,0,0.35), 0 4px 10px rgba(0,0,0,0.25); }
     
-    /* Enhanced project card animations */
     .project-card {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       transform-origin: center;
@@ -74,7 +70,6 @@
       box-shadow: 0 25px 50px rgba(0,0,0,0.4), 0 10px 20px rgba(0,0,0,0.3);
     }
     
-    /* Smooth scrolling for project content */
     .project-content {
       max-height: 0;
       overflow: hidden;
@@ -85,7 +80,6 @@
       max-height: 200px;
     }
     
-    /* Custom scrollbar styling */
     .scrollbar-thin {
       scrollbar-width: thin;
     }
@@ -98,7 +92,6 @@
       background: transparent;
     }
     
-    /* Enhanced project cover hover scroll effect */
     .project-cover-container {
       position: relative;
       overflow: hidden;
@@ -107,7 +100,7 @@
     .project-cover-image {
       transition: transform 3s cubic-bezier(0.4, 0, 0.2, 1);
       will-change: transform;
-      height: 150%; /* Make image much taller to enable full scrolling */
+      height: 150%;
       width: 100%;
       object-fit: cover;
       object-position: top;
@@ -117,7 +110,6 @@
       transform: scale(1.05) translateY(-50%);
     }
     
-    /* Enhanced iframe scaling */
     .project-iframe {
       transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
       will-change: transform;
@@ -127,7 +119,6 @@
       transform: scale(1.05);
     }
     
-    /* Enhanced animations for all elements */
     .animate-fade-in {
       animation: fadeIn 0.8s ease-out forwards;
     }
@@ -219,7 +210,6 @@
       }
     }
     
-    /* Enhanced hover effects */
     .hover-lift {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -233,7 +223,6 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     }
     
-    /* Floating animation for decorative elements */
     .float {
       animation: float 3s ease-in-out infinite;
     }
@@ -248,7 +237,6 @@
       50% { transform: translateY(-10px); }
     }
     
-    /* Pulse animation for interactive elements */
     .pulse-slow {
       animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
@@ -258,7 +246,6 @@
       50% { opacity: 0.7; }
     }
     
-    /* Gradient text animation */
     .gradient-text {
       background: linear-gradient(-45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
       background-size: 400% 400%;
@@ -283,7 +270,6 @@
       background-color: #475569;
     }
     
-    /* Enhanced iframe scaling */
     .iframe-container {
       transform: scale(0.75);
       transform-origin: top left;
@@ -291,12 +277,10 @@
       height: 800px;
     }
     
-    /* Smooth transitions for all interactive elements */
     * {
       transition: all 0.2s ease-in-out;
     }
   </style>
-  <!-- Lucide icons -->
   <script src="https://unpkg.com/lucide@0.469.0"></script>
   <script>
     // Theme: honor system preference + persist
@@ -350,7 +334,7 @@
         try { await navigator.clipboard.writeText('amirayoubi2001kh@gmail.com'); 
           const t = document.getElementById('copyText'); t.textContent = 'Copied!';
           setTimeout(() => t.textContent = 'Copy', 1400);
-        } catch {/* ignore */}
+        } catch {}
       });
       // Mobile menu
       const menuBtn = document.getElementById('menuBtn');
@@ -365,9 +349,8 @@
 <body class="min-h-screen bg-gradient-to-b from-sky-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 text-slate-800 dark:text-slate-100 font-sans bg-grid">
 
 
-  <!-- NAV -->
   <header class="sticky top-0 z-40 bg-white/70 dark:bg-slate-900/60 backdrop-blur border-b border-slate-200/50 dark:border-slate-700/50">
-    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
       <div class="flex items-center gap-3">
         <div class="h-9 w-9 rounded-2xl bg-gradient-to-br from-brand-500 to-sky-400 flex items-center justify-center text-white font-bold">A</div>
         <span class="font-semibold tracking-tight">Amirhossein Ayoubi</span>
@@ -392,7 +375,7 @@
       </div>
     </div>
     <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200/60 dark:border-slate-800/60">
-      <nav class="px-4 py-3 grid gap-3 text-sm">
+      <nav class="px-4 sm:px-6 lg:px-8 py-3 grid gap-3 text-sm">
         <a href="#about" class="hover:text-sky-600">About</a>
         <a href="#skills" class="hover:text-sky-600">Skills</a>
         <a href="#projects" class="hover:text-sky-600">Projects</a>
@@ -403,37 +386,36 @@
     </div>
   </header>
 
-  <main id="main" class="max-w-6xl mx-auto px-4">
-    <!-- HERO -->
+  <main id="main" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <section id="about" class="pt-16 md:pt-24 pb-10">
-      <div class="flex gap-12 items-center">
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
         <div data-fade class="animate-slide-left">
           <div class="flex items-center gap-6 mb-6">
             <div>
-              <h1 class="text-4xl md:text-6xl font-extrabold ">
+              <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold ">
                 <div class="block animate-fade-in ">Front‑End Engineer</div>
                 <div class="bg-clip-text mt-1 text-transparent bg-gradient-to-r from-sky-500 via-indigo-500 to-fuchsia-500 gradient-text">Software Engineering, Performance, Design Systems & AI/ML</div>
               </h1>
             </div>
           </div>
-          <p class="mt-6 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+          <p class="mt-6 text-base sm:text-lg leading-relaxed text-slate-600 dark:text-slate-300">
             Software Engineer with 5+ years building high-performance, scalable, user-centric web apps.
           </p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="mailto:amirayoubi2001kh@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200 shadow-soft">
+          <div class="mt-6 flex flex-wrap gap-2 sm:gap-3">
+            <a href="mailto:amirayoubi2001kh@gmail.com" class="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200 shadow-soft text-sm sm:text-base">
               <i data-lucide="mail" class="w-4 h-4"></i> Email
             </a>
-            <a href="https://www.linkedin.com/in/amirhossein-ayoubi/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">
+            <a href="https://www.linkedin.com/in/amirhossein-ayoubi/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm sm:text-base">
               <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
             </a>
-            <a href="https://github.com/AmirhosseinAyoubi" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">
+            <a href="https://github.com/AmirhosseinAyoubi" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm sm:text-base">
               <i data-lucide="github" class="w-4 h-4"></i> GitHub
             </a>
-            <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">
+            <a href="#contact" class="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm sm:text-base">
               <i data-lucide="send" class="w-4 h-4"></i> Hire me
             </a>
           </div>
-          <div class="mt-6 text-sm text-slate-500 dark:text-slate-400 flex flex-wrap items-center gap-6">
+          <div class="mt-6 text-xs sm:text-sm text-slate-500 dark:text-slate-400 flex flex-wrap items-center gap-3 sm:gap-6">
             <span class="inline-flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Finland</span>
             <a href="tel:+358449604635" class="inline-flex items-center gap-2 hover:underline"><i data-lucide="phone" class="w-4 h-4"></i> +358449604635</a>
             <button id="copyEmail" class="inline-flex items-center gap-2 hover:underline"><i data-lucide="clipboard" class="w-4 h-4"></i> <span id="copyText">Copy</span> email</button>
@@ -452,13 +434,12 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills" class="py-10">
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Skills</h2>
-      <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">Skills</h2>
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         <div class="glass p-5 rounded-2xl border border-slate-200/60 dark:border-slate-700/60">
           <h3 class="font-semibold mb-3">Languages</h3>
-          <div class="flex flex-wrap gap-2 text-sm">
+          <div class="flex flex-wrap gap-2 text-xs sm:text-sm">
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">JavaScript</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">TypeScript</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Python</span>
@@ -466,7 +447,7 @@
         </div>
         <div class="glass p-5 rounded-2xl border border-slate-200/60 dark:border-slate-700/60">
           <h3 class="font-semibold mb-3">Frameworks & Libraries</h3>
-          <div class="flex flex-wrap gap-2 text-sm">
+          <div class="flex flex-wrap gap-2 text-xs sm:text-sm">
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">React</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Next.js</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Redux</span>
@@ -478,7 +459,7 @@
         </div>
         <div class="glass p-5 rounded-2xl border border-slate-200/60 dark:border-slate-700/60">
           <h3 class="font-semibold mb-3">Styling & UI</h3>
-          <div class="flex flex-wrap gap-2 text-sm">
+          <div class="flex flex-wrap gap-2 text-xs sm:text-sm">
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">HTML5</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">CSS3</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">SASS</span>
@@ -490,7 +471,7 @@
         </div>
         <div class="glass p-5 rounded-2xl border border-slate-200/60 dark:border-slate-700/60">
           <h3 class="font-semibold mb-3">Tools & Platforms</h3>
-          <div class="flex flex-wrap gap-2 text-sm">
+          <div class="flex flex-wrap gap-2 text-xs sm:text-sm">
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Git</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Docker</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">AWS</span>
@@ -502,7 +483,7 @@
         </div>
         <div class="glass p-5 rounded-2xl border border-slate-200/60 dark:border-slate-700/60">
           <h3 class="font-semibold mb-3">Testing</h3>
-          <div class="flex flex-wrap gap-2 text-sm">
+          <div class="flex flex-wrap gap-2 text-xs sm:text-sm">
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Jest</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">React Testing Library</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Cypress</span>
@@ -510,7 +491,7 @@
         </div>
         <div class="glass p-5 rounded-2xl border border-slate-200/60 dark:border-slate-700/60">
           <h3 class="font-semibold mb-3">Concepts</h3>
-          <div class="flex flex-wrap gap-2 text-sm">
+          <div class="flex flex-wrap gap-2 text-xs sm:text-sm">
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Design Systems</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Micro‑Frontends</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Localization</span>
@@ -522,7 +503,7 @@
       
         <div class="glass p-5 rounded-2xl border border-slate-200/60 dark:border-slate-700/60">
           <h3 class="font-semibold mb-3">Machine Learning</h3>
-          <div class="flex flex-wrap gap-2 text-sm">
+          <div class="flex flex-wrap gap-2 text-xs sm:text-sm">
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">TensorFlow</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">PyTorch</span>
             <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">scikit-learn</span>
@@ -536,12 +517,11 @@
 </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects" class="py-10">
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Sample Projects</h2>
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">Sample Projects</h2>
       <p class="mt-2 text-slate-600 dark:text-slate-300">Live products and technical projects I've built. Hover to explore and click to visit.</p>
       
-      <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         <div class="project-card group rounded-2xl overflow-hidden border border-slate-200/60 dark:border-slate-700/60 bg-white/60 dark:bg-slate-900/40 shadow-soft">
           <div class="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
             <div class="project-cover-container w-full duration-[3000s] overflow-hidden">
@@ -556,7 +536,7 @@
             </div>
           </div>
           <div class="p-4">
-            <div class="flex items-start justify-between gap-3 mb-2">
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-3 mb-2">
               <div>
                 <h3 class="font-semibold">Zhaket — E-commerce Platform</h3>
                 <p class="text-sm text-slate-600 dark:text-slate-300">zhaket.com</p>
@@ -584,7 +564,7 @@
             </div>
           </div>
           <div class="p-4">
-            <div class="flex items-start justify-between gap-3 mb-2">
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-3 mb-2">
               <div>
                 <h3 class="font-semibold">CryptoCrispy — Company Site</h3>
                 <p class="text-sm text-slate-600 dark:text-slate-300">cryptocrispy.com.au</p>
@@ -610,7 +590,7 @@
             </div>
           </div>
           <div class="p-4">
-            <div class="flex items-start justify-between gap-3 mb-2">
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-3 mb-2">
               <div>
                 <h3 class="font-semibold">CryptoCrispy — Web App</h3>
                 <p class="text-sm text-slate-600 dark:text-slate-300">app.cryptocrispy.com.au</p>
@@ -638,7 +618,7 @@
             </div>
           </div>
           <div class="p-4">
-            <div class="flex items-start justify-between gap-3 mb-2">
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-3 mb-2">
               <div>
                 <h3 class="font-semibold">Podingo — Language Learning</h3>
                 <p class="text-sm text-slate-600 dark:text-slate-300">podingo.com</p>
@@ -655,14 +635,13 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
     <section id="experience" class="py-10">
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Experience</h2>
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">Experience</h2>
       <ol class="mt-6 relative border-l border-slate-200 dark:border-slate-800">
         <li class="ms-6 mb-10">
           <span class="absolute -start-3 mt-1 flex items-center justify-center w-6 h-6 rounded-full bg-sky-500 text-white text-xs">1</span>
           <div class="glass rounded-2xl p-5 border border-slate-200/60 dark:border-slate-700/60">
-            <div class="flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
               <h3 class="font-semibold">Senior Front‑End Developer — Zhaket</h3>
               <span class="text-xs text-slate-500">Jun 2022 – Jul 2025 · Tehran</span>
             </div>
@@ -677,7 +656,7 @@
         <li class="ms-6 mb-10">
           <span class="absolute -start-3 mt-1 flex items-center justify-center w-6 h-6 rounded-full bg-sky-500 text-white text-xs">2</span>
           <div class="glass rounded-2xl p-5 border border-slate-200/60 dark:border-slate-700/60">
-            <div class="flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
               <h3 class="font-semibold">Front‑End Developer — Mapizy</h3>
               <span class="text-xs text-slate-500">May 2021 – Jun 2022 · Australia</span>
             </div>
@@ -691,7 +670,7 @@
         <li class="ms-6 mb-2">
           <span class="absolute -start-3 mt-1 flex items-center justify-center w-6 h-6 rounded-full bg-sky-500 text-white text-xs">3</span>
           <div class="glass rounded-2xl p-5 border border-slate-200/60 dark:border-slate-700/60">
-            <div class="flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
               <h3 class="font-semibold">Front‑End Developer — Parto</h3>
               <span class="text-xs text-slate-500">Feb 2020 – Apr 2021 · Tehran</span>
             </div>
@@ -705,19 +684,18 @@
       </ol>
     </section>
 
-    <!-- EDUCATION -->
     <section id="education" class="py-10">
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Education</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">Education</h2>
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
         <div class="glass rounded-2xl p-6 border border-slate-200/60 dark:border-slate-700/60">
-          <div class="flex items-center justify-between">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <h3 class="font-semibold">M.Sc., Software Engineering</h3>
             <span class="text-xs text-slate-500">2025 – present</span>
           </div>
           <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">University of Oulu, Finland</p>
         </div>
         <div class="glass rounded-2xl p-6 border border-slate-200/60 dark:border-slate-700/60">
-          <div class="flex items-center justify-between">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <h3 class="font-semibold">B.Sc., Computer Engineering</h3>
             <span class="text-xs text-slate-500">2019 – 2023</span>
           </div>
@@ -726,10 +704,9 @@
       </div>
     </section>
 
-    <!-- LANGUAGES -->
     <section id="languages" class="py-10">
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Languages</h2>
-      <div class="mt-4 flex flex-wrap gap-2 text-sm">
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">Languages</h2>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs sm:text-sm">
         <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">English — C1</span>
         <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Finnish — A1 (learning)</span>
         <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Persian — Native</span>
@@ -737,15 +714,14 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="py-10">
-      <div class="glass rounded-3xl p-8 border border-slate-200/60 dark:border-slate-700/60">
-        <div class="flex flex-wrap items-center justify-between gap-4">
+      <div class="glass rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200/60 dark:border-slate-700/60">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Let’s build something great.</h2>
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">Let's build something great.</h2>
             <p class="mt-1 text-slate-600 dark:text-slate-300">The fastest way to reach me is by email. I’m open to internships, part‑time, and full‑time roles.</p>
           </div>
-          <div class="flex gap-3">
+          <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
             <a href="mailto:amirayoubi2001kh@gmail.com" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-sky-600 text-white hover:bg-sky-700 shadow-soft"><i data-lucide="mail" class="w-5 h-5"></i>Email me</a>
             <a href="https://github.com/AmirhosseinAyoubi" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800"><i data-lucide="github" class="w-5 h-5"></i>GitHub</a>
           </div>
